@@ -187,6 +187,12 @@ jogadores = [
 if 'schedule' not in st.session_state:
     st.session_state.schedule = load_schedule()
 
+# Carregar os jogos pré-cadastrados
+if os.path.exists("jogos_pre_cadastrados.csv"):
+    pre_cadastrados = pd.read_csv("jogos_pre_cadastrados.csv", parse_dates=["Data"])
+    st.session_state.schedule = pd.concat([st.session_state.schedule, pre_cadastrados], ignore_index=True)
+    save_schedule(st.session_state.schedule)  # Salva os pré-cadastros no arquivo principal
+
 # Carregar os resultados dos jogos
 if 'results' not in st.session_state:
     st.session_state.results = load_results()
