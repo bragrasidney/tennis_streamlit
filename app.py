@@ -18,6 +18,18 @@ def load_schedule():
 def save_schedule(schedule):
     schedule.to_csv(SCHEDULE_FILE, index=False)
 
+# Função para limpar o arquivo agendamentos.csv
+def limpar_agendamentos():
+    if os.path.exists("agendamentos.csv"):
+        os.remove("agendamentos.csv")
+        st.session_state.schedule = pd.DataFrame(columns=["Data", "Horario", "Classe", "Grupo", "Jogador1", "Jogador2"])
+        st.success("Arquivo agendamentos.csv limpo com sucesso!")
+    else:
+        st.warning("O arquivo agendamentos.csv não existe.")
+
+# Adicione um botão para limpar o arquivo
+if st.button("Limpar arquivo agendamentos.csv"):
+    limpar_agendamentos()
 # Função para carregar os resultados dos jogos
 def load_results():
     if os.path.exists(RESULTS_FILE):
