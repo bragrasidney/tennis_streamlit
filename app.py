@@ -187,19 +187,34 @@ jogadores = [
 if 'schedule' not in st.session_state:
     st.session_state.schedule = load_schedule()
 
+# Função para verificar se um jogo já existe no schedule
+def jogo_ja_existe(jogo, schedule):
+    return ((schedule["Data"] == jogo["Data"]) &
+            (schedule["Horario"] == jogo["Horario"]) &
+            (schedule["Classe"] == jogo["Classe"]) &
+            (schedule["Grupo"] == jogo["Grupo"]) &
+            (schedule["Jogador1"] == jogo["Jogador1"]) &
+            (schedule["Jogador2"] == jogo["Jogador2"])).any()
+
 # Carregar os jogos pré-cadastrados
 if os.path.exists("jogos_pre_cadastrados.csv"):
     pre_cadastrados = pd.read_csv("jogos_pre_cadastrados.csv", parse_dates=["Data"])
-    st.session_state.schedule = pd.concat([st.session_state.schedule, pre_cadastrados], ignore_index=True)
-    save_schedule(st.session_state.schedule)  # Salva os pré-cadastros no arquivo principal
-
-# Carregar os resultados dos jogos
-if 'results' not in st.session_state:
-    st.session_state.results = load_results()
-
-# Inicializar o mês atual no session_state
-if 'current_month' not in st.session_state:
-    st.session_state.current_month = start_date.replace(day=1)  # Começa no primeiro dia do mês inicial
+    
+    # Verificar se os jogos pré-cadastrados já foram adicionados
+    if 'schedule' not in st.session_state:
+        st.session_state.schedule = load_schedule()
+    
+    # Adicionar apenas os jogos que ainda não estão no schedule
+    novos_jogos = []
+    for _, jogo in pre_cadastrados.iterrows():
+        if not jogo_ja_existe(jogo, st.session_state.schedule):
+            novos_jogos.append(jogo)
+    
+    if novos_jogos:
+        novos_jogos_df = pd.DataFrame(novos_jogos)
+        st.session_state.schedule = pd.concat([st.session_state.schedule, novos_jogos_df], ignore_index=True)
+        save_schedule(st.session_state.schedule)
+        st.success(f"{len(novos_jogos)} jogos pré-cadastrados adicionados com sucesso!")
 
 # Abas para agendamento e resultados
 tab1, tab2 = st.tabs(["Agendamento de Jogos", "Resultados e Estatísticas"])
