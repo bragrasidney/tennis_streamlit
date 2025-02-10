@@ -216,7 +216,6 @@ if os.path.exists("jogos_pre_cadastrados.csv"):
         st.session_state.schedule = load_schedule()
     
     # Adicionar apenas os jogos que ainda não estão no schedule
-       # Adicionar apenas os jogos que ainda não estão no schedule
     novos_jogos = []
     for _, jogo in pre_cadastrados.iterrows():
         if not jogo_ja_existe(jogo, st.session_state.schedule):
