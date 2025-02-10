@@ -195,10 +195,11 @@ jogadores = [
     "Túlio Ourique", "Vinicius Paiva", "Walmir Irineu", "Walter C", "Warwick Melo", "Willian F"
 ]
 
-# Carregar os jogos agendados
+# Inicialização do estado
 if 'schedule' not in st.session_state:
     st.session_state.schedule = load_schedule()
-    # Função para verificar se um jogo já existe no schedule
+    st.session_state.jogos_carregados = False  # Flag para indicar se os jogos pré-cadastrados já foram carregados
+    
 def jogo_ja_existe(jogo, schedule):
     return ((schedule["Data"] == jogo["Data"]) &
             (schedule["Horario"] == jogo["Horario"]) &
@@ -207,31 +208,28 @@ def jogo_ja_existe(jogo, schedule):
             (schedule["Jogador1"] == jogo["Jogador1"]) &
             (schedule["Jogador2"] == jogo["Jogador2"])).any()
 
-# Carregar os jogos pré-cadastrados
-if os.path.exists("jogos_pre_cadastrados.csv"):
+# Carregar os jogos pré-cadastrados (apenas uma vez)
+if os.path.exists("jogos_pre_cadastrados.csv") and not st.session_state.jogos_carregados:
     pre_cadastrados = pd.read_csv("jogos_pre_cadastrados.csv", parse_dates=["Data"])
-    
-    # Verificar se os jogos pré-cadastrados já foram adicionados
-    if 'schedule' not in st.session_state:
-        st.session_state.schedule = load_schedule()
     
     # Adicionar apenas os jogos que ainda não estão no schedule
     novos_jogos = []
     for _, jogo in pre_cadastrados.iterrows():
-        if not jogo_ja_existe(jogo, st.session_state.schedule):
-            # Converter a string de horário para um objeto datetime.time
-            horario = datetime.datetime.strptime(jogo["Horario"], "%H:%M").time()
-            # Combinar data e horário
-            data_horario = datetime.datetime.combine(jogo["Data"].date(), horario)
-            # Criar um novo jogo com a data e horário combinados
-            novo_jogo = {
-                "Data": data_horario,
-                "Horario": jogo["Horario"],
-                "Classe": jogo["Classe"],
-                "Grupo": jogo["Grupo"],
-                "Jogador1": jogo["Jogador1"],
-                "Jogador2": jogo["Jogador2"]
-            }
+        # Converter a string de horário para um objeto datetime.time
+        horario = datetime.datetime.strptime(jogo["Horario"], "%H:%M").time()
+        # Combinar data e horário
+        data_horario = datetime.datetime.combine(jogo["Data"].date(), horario)
+        # Criar um novo jogo com a data e horário combinados
+        novo_jogo = {
+            "Data": data_horario,
+            "Horario": jogo["Horario"],
+            "Classe": jogo["Classe"],
+            "Grupo": jogo["Grupo"],
+            "Jogador1": jogo["Jogador1"],
+            "Jogador2": jogo["Jogador2"]
+        }
+        # Verificar se o jogo já existe no schedule
+        if not jogo_ja_existe(novo_jogo, st.session_state.schedule):
             novos_jogos.append(novo_jogo)
     
     if novos_jogos:
@@ -239,6 +237,8 @@ if os.path.exists("jogos_pre_cadastrados.csv"):
         st.session_state.schedule = pd.concat([st.session_state.schedule, novos_jogos_df], ignore_index=True)
         save_schedule(st.session_state.schedule)
         st.success(f"{len(novos_jogos)} jogos pré-cadastrados adicionados com sucesso!")
+    
+    st.session_state.jogos_carregados = True  # Marca os jogos como carregados
 
 # Carregar os resultados dos jogos
 if 'results' not in st.session_state:
@@ -316,19 +316,22 @@ with tab1:
                 selected_group = st.selectbox("Selecione o grupo", [1, 2, 3, 4])
 
     # Aplicar filtros (se selecionados)
-    filtered_schedule = st.session_state.schedule.copy()
+filtered_schedule = st.session_state.schedule.copy()
 
-    if filter_by_date and selected_date:
-        filtered_schedule = filtered_schedule[filtered_schedule["Data"].dt.date == selected_date]
+# Filtro por data
+if filter_by_date and selected_date:
+    filtered_schedule = filtered_schedule[filtered_schedule["Data"].dt.date == selected_date]
 
-    if filter_by_class and selected_class:
-        filtered_schedule = filtered_schedule[filtered_schedule["Classe"] == selected_class]
+# Filtro por classe
+if filter_by_class and selected_class:
+    filtered_schedule = filtered_schedule[filtered_schedule["Classe"] == selected_class]
 
-    if filter_by_group and selected_group:
-        filtered_schedule = filtered_schedule[filtered_schedule["Grupo"] == selected_group]
+# Filtro por grupo
+if filter_by_group and selected_group:
+    filtered_schedule = filtered_schedule[filtered_schedule["Grupo"] == selected_group]
 
-    # Ordenar a lista de jogos por data (da mais recente para a mais futura)
-    filtered_schedule = filtered_schedule.sort_values(by="Data", ascending=True)
+# Ordenar a lista de jogos por data (da mais recente para a mais futura)
+filtered_schedule = filtered_schedule.sort_values(by="Data", ascending=True)
 
     # Exibição da lista de jogos
     if not filtered_schedule.empty:
