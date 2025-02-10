@@ -234,11 +234,11 @@ if os.path.exists("jogos_pre_cadastrados.csv"):
             }
             novos_jogos.append(novo_jogo)
     
-    if novos_jogos:
-        novos_jogos_df = pd.DataFrame(novos_jogos)
-        st.session_state.schedule = pd.concat([st.session_state.schedule, novos_jogos_df], ignore_index=True)
-        save_schedule(st.session_state.schedule)
-        st.success(f"{len(novos_jogos)} jogos pré-cadastrados adicionados com sucesso!")
+            if novos_jogos:
+                novos_jogos_df = pd.DataFrame(novos_jogos)
+                st.session_state.schedule = pd.concat([st.session_state.schedule, novos_jogos_df], ignore_index=True)
+                save_schedule(st.session_state.schedule)
+                st.success(f"{len(novos_jogos)} jogos pré-cadastrados adicionados com sucesso!")
 
 # Carregar os resultados dos jogos
 if 'results' not in st.session_state:
