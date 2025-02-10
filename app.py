@@ -105,6 +105,20 @@ def display_calendar(calendar, current_month):
         if current_date.weekday() == 0:
             st.write("")  # Adiciona uma linha em branco para separar as semanas
 
+    # Adiciona navegação entre meses
+    st.write("---")
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col1:
+        if st.button("Mês Anterior"):
+            st.session_state.current_month = (current_month.replace(day=1) - timedelta(days=1)).replace(day=1)
+            st.experimental_rerun()
+    with col3:
+        if st.button("Próximo Mês"):
+            st.session_state.current_month = (current_month.replace(day=28) + timedelta(days=4)).replace(day=1)
+            st.experimental_rerun()
+    with col2:
+        st.write(f"**Mês Atual:** {current_month.strftime('%B %Y')}")
+
 # Função para avaliar a meta de jogos por semana
 def evaluate_weekly_goal(schedule, start_date, end_date):
     weekly_goals = {}
