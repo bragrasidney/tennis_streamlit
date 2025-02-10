@@ -315,23 +315,23 @@ with tab1:
             if filter_by_group:
                 selected_group = st.selectbox("Selecione o grupo", [1, 2, 3, 4])
 
-# Aplicar filtros (se selecionados)
-filtered_schedule = st.session_state.schedule.copy()
-
-# Filtro por data
-if filter_by_date and selected_date:
-    filtered_schedule = filtered_schedule[filtered_schedule["Data"].dt.date == selected_date]
-
-# Filtro por classe
-if filter_by_class and selected_class:
-    filtered_schedule = filtered_schedule[filtered_schedule["Classe"] == selected_class]
-
-# Filtro por grupo
-if filter_by_group and selected_group:
-    filtered_schedule = filtered_schedule[filtered_schedule["Grupo"] == selected_group]
-
-# Ordenar a lista de jogos por data (da mais recente para a mais futura)
-filtered_schedule = filtered_schedule.sort_values(by="Data", ascending=True)
+    # Aplicar filtros (se selecionados)
+    filtered_schedule = st.session_state.schedule.copy()
+    
+    # Filtro por data
+    if filter_by_date and selected_date:
+        filtered_schedule = filtered_schedule[filtered_schedule["Data"].dt.date == selected_date]
+    
+    # Filtro por classe
+    if filter_by_class and selected_class:
+        filtered_schedule = filtered_schedule[filtered_schedule["Classe"] == selected_class]
+    
+    # Filtro por grupo
+    if filter_by_group and selected_group:
+        filtered_schedule = filtered_schedule[filtered_schedule["Grupo"] == selected_group]
+    
+    # Ordenar a lista de jogos por data (da mais recente para a mais futura)
+    filtered_schedule = filtered_schedule.sort_values(by="Data", ascending=True)
 
     # Exibição da lista de jogos
     if not filtered_schedule.empty:
