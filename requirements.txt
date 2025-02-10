@@ -3,3 +3,5 @@ datetime
 pandas
 plotly.express
 openpyxl
+matplotlib.pyplot
+matplotlib.dates
