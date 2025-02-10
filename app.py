@@ -111,11 +111,11 @@ def display_calendar(calendar, current_month):
     with col1:
         if st.button("Mês Anterior"):
             st.session_state.current_month = (current_month.replace(day=1) - timedelta(days=1)).replace(day=1)
-            st.experimental_rerun()
+            st.rerun()
     with col3:
         if st.button("Próximo Mês"):
             st.session_state.current_month = (current_month.replace(day=28) + timedelta(days=4)).replace(day=1)
-            st.experimental_rerun()
+            st.rerun()
     with col2:
         st.write(f"**Mês Atual:** {current_month.strftime('%B %Y')}")
 
@@ -137,7 +137,7 @@ def delete_game(index):
     st.session_state.schedule = st.session_state.schedule.drop(index).reset_index(drop=True)
     save_schedule(st.session_state.schedule)
     st.success("Jogo excluído com sucesso!")
-    st.experimental_rerun()  # Recarrega a página para atualizar a lista
+    st.rerun()  # Recarrega a página para atualizar a lista
 
 # Função para calcular estatísticas por grupo
 def calculate_group_stats(results, group):
