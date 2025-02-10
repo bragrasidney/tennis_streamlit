@@ -315,7 +315,7 @@ with tab1:
             if filter_by_group:
                 selected_group = st.selectbox("Selecione o grupo", [1, 2, 3, 4])
 
-    # Aplicar filtros (se selecionados)
+# Aplicar filtros (se selecionados)
 filtered_schedule = st.session_state.schedule.copy()
 
 # Filtro por data
