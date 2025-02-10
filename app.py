@@ -219,7 +219,20 @@ if os.path.exists("jogos_pre_cadastrados.csv"):
     novos_jogos = []
     for _, jogo in pre_cadastrados.iterrows():
         if not jogo_ja_existe(jogo, st.session_state.schedule):
-            novos_jogos.append(jogo)
+            # Converter a string de horário para um objeto datetime.time
+            horario = datetime.datetime.strptime(jogo["Horario"], "%H:%M").time()
+            # Combinar data e horário
+            data_horario = datetime.datetime.combine(jogo["Data"].date(), horario)
+            # Criar um novo jogo com a data e horário combinados
+            novo_jogo = {
+                "Data": data_horario,
+                "Horario": jogo["Horario"],
+                "Classe": jogo["Classe"],
+                "Grupo": jogo["Grupo"],
+                "Jogador1": jogo["Jogador1"],
+                "Jogador2": jogo["Jogador2"]
+            }
+            novos_jogos.append(novo_jogo)
     
     if novos_jogos:
         novos_jogos_df = pd.DataFrame(novos_jogos)
