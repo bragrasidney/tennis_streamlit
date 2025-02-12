@@ -1,73 +1,73 @@
 Data,Horario,Classe,Grupo,Jogador1,Jogador2
-2025-02-05,19:00,Classe C,G2,Fernando Guedes,Fagner Bantim
-2025-02-05,19:00,Classe C,G4,Bruno Casale,Júnior Neres
-2025-02-06,19:00,Classe B,G2,Lupesse Santana,Airton Barata
-2025-02-07,16:00,Classe C,G1,Sandro Mesquita,João Rezende
-2025-02-07,19:00,Classe B,G4,Joel Silva,Matheus Silva
-2025-02-07,19:00,Classe C,G3,Victtor Barbosa,Emivaldo Feitosa
-2025-02-08,07:00,Classe B,G4,Warwick Melo,Fernando Lino
-2025-02-08,09:00,Classe C,G1,Maximiliano Costa,Italo Araújo
-2025-02-08,17:00,Classe B,G1,Walter Lucena,Walmir Júnior
-2025-02-08,17:00,Classe B,G3,José Junior,Vinicius Paiva
-2025-02-09,07:00,Classe C,G1,Italo Araújo,Sandro Mesquita
-2025-02-09,08:00,Classe B,G3,Luiz Júnior,Danilo Alves
-2025-02-10,19:00,Classe C,G4,Paulo Pedrosa,Bruno Casale
-2025-02-10,20:00,Classe C,G2,Willian Ferreira,Fernando Guedes
-2025-02-10,20:30,Classe C,G4,Wilson Lopes,Júnior Neres
-2025-02-11,19:00,Classe B,G2,Augusto Espíndola,Lupesse Santana
-2025-02-11,20:00,Classe B,G1,Willian Ferreira,Walter Lucena
-2025-02-12,18:00,Classe B,G3,José Junior,Luiz Júnior
-2025-02-12,18:00,Classe C,G1,Maximiliano Costa,João Rezende
-2025-02-12,19:00,Classe B,G4,Matheus Silva,Fernando Lino
-2025-02-12,19:00,Classe C,G4,Paulo Pedrosa,Wilson Lopes
-2025-02-13,19:30,Classe B,G2,Túlio Ourique,Lupesse Santana
-2025-02-14,19:00,Classe C,G4,Wilson Lopes,Bruno Casale
-2025-02-14,19:00,Classe C,G4,Júnior Neres,Paulo Pedrosa
-2025-02-14,20:00,Classe B,G4,Warwick Melo,Matheus Silva
-2025-02-14,20:00,Classe C,G1,João Rezende,Italo Araújo
-2025-02-14,21:00,Classe C,G1,Sandro Mesquita,Maximiliano Costa
-2025-02-15,08:00,Classe C,G2,Willian Ferreira,Denilson Montezani
-2025-02-15,08:00,Classe C,G3,Emivaldo Feitosa,Túlio Ourique
-2025-02-15,17:00,Classe B,G4,Warwick Melo,Sidney Santos
-2025-02-15,18:00,Classe C,G4,Aparecido Fernandes,Paulo Pedrosa
-2025-02-16,07:30,Classe D,G2,Rhuan Teixeira,Cássio Noronha
-2025-02-16,08:30,Classe B,G3,Vinicius Paiva,Danilo Alves
-2025-02-16,09:30,Classe B,G3,Luiz Júnior,Vinicius Paiva
-2025-02-16,10:00,Classe D,G1,Bruno Melo,Wilson Lopes
-2025-02-16,16:30,Classe B,G4,Matheus Silva,Sidney Santos
-2025-02-16,17:30,Classe D,G2,Yanna Sousa,Thiago Vaz
-2025-02-17,17:00,Classe B,G4,Fernando Lino,Sidney Santos
-2025-02-17,19:00,Classe C,G4,Aparecido Fernandes,Bruno Casale
-2025-02-17,20:00,Classe C,G2,Fernando Guedes,Denilson Montezani
-2025-02-19,19:00,Classe B,G3,Danilo Alves,José Junior
-2025-02-19,20:00,Classe D,G2,Thiago Vaz,Cássio Noronha
-2025-02-20,19:00,Classe B,G4,Joel Silva,Fernando Lino
-2025-02-21,18:00,Classe B,G2,Airton Barata,Augusto Espíndola
-2025-02-21,19:00,Classe D,G2,Rhuan Teixeira,Thiago Vaz
-2025-02-22,07:30,Classe D,G1,Gustavo Avila,Bruno Melo
-2025-02-22,16:00,Classe D,G2,Yanna Sousa,Rhuan Teixeira
-2025-02-22,17:00,Classe B,G2,Airton Barata,Túlio Ourique
-2025-02-22,19:00,Classe C,G4,Wilson Lopes,Aparecido Fernandes
-2025-02-23,08:00,Classe C,G4,Júnior Neres,Aparecido Fernandes
-2025-02-23,09:00,Classe C,G2,Denilson Montezani,Fagner Bantim
-2025-02-23,16:30,Classe D,G2,Cássio Noronha,Yanna Sousa
-2025-02-23,17:30,Classe D,G1,Gustavo Avila,Jalmir Fernandes
-2025-02-23,18:30,Classe D,G1,Wilson Lopes,Cleber Correia
-2025-02-24,19:00,Classe B,G4,Joel Silva,Warwick Melo
-2025-02-24,20:00,Classe D,G1,Cleber Correia,Jalmir Fernandes
-2025-02-26,19:00,Classe B,G4,Sidney Santos,Joel Silva
-2025-02-26,20:00,Classe B,G1,Walmir Júnior,Willian Ferreira
-2025-02-28,19:00,Classe C,G3,Túlio Ourique,Victtor Barbosa
-2025-02-28,20:00,Classe B,G2,Augusto Espíndola,Túlio Ourique
-2025-02-28,21:00,Classe D,G1,Wilson Lopes,Gustavo Avila
-2025-03-01,07:30,Classe D,G1,Bruno Melo,Jalmir Fernandes
-2025-03-01,17:30,Classe D,G1,Gustavo Avila,Cleber Correia
-2025-03-02,07:30,Classe D,G1,Cleber Correia,Bruno Melo
-2025-03-02,08:30,Classe D,G1,Jalmir Fernandes,Wilson Lopes
-2025-03-05,07:00,Classe C,G3,Mateus Moury,Emivaldo Feitosa
-2025-03-07,06:30,Classe C,G3,Túlio Ourique,Mateus Moury
-2025-03-07,18:00,Classe B,G1,Walmir Júnior,Carlos Costa
-2025-03-09,08:00,Classe B,G1,Carlos Costa,Walter Lucena
-2025-03-10,19:00,Classe B,G1,Willian Ferreira,Carlos Costa
-2025-03-10,19:00,Classe C,G2,Fagner Bantim,Willian Ferreira
-2025-03-12,19:00,Classe C,G3,Victtor Barbosa,Mateus Moury
+2025-02-05,19:00,C,2,Fernando Guedes,Fagner Bantim
+2025-02-05,19:00,C,4,Bruno Casale,Júnior Neres
+2025-02-06,19:00,B,2,Lupesse Santana,Airton Barata
+2025-02-07,16:00,C,1,Sandro Mesquita,João Rezende
+2025-02-07,19:00,B,4,Joel Silva,Matheus Silva
+2025-02-07,19:00,C,3,Victtor Barbosa,Emivaldo Feitosa
+2025-02-08,07:00,B,4,Warwick Melo,Fernando Lino
+2025-02-08,09:00,C,1,Maximiliano Costa,Italo Araújo
+2025-02-08,17:00,B,1,Walter Lucena,Walmir Júnior
+2025-02-08,17:00,B,3,José Junior,Vinicius Paiva
+2025-02-09,07:00,C,1,Italo Araújo,Sandro Mesquita
+2025-02-09,08:00,B,3,Luiz Júnior,Danilo Alves
+2025-02-10,19:00,C,4,Paulo Pedrosa,Bruno Casale
+2025-02-10,20:00,C,2,Willian Ferreira,Fernando Guedes
+2025-02-10,20:30,C,4,Wilson Lopes,Júnior Neres
+2025-02-11,19:00,B,2,Augusto Espíndola,Lupesse Santana
+2025-02-11,20:00,B,1,Willian Ferreira,Walter Lucena
+2025-02-12,18:00,B,3,José Junior,Luiz Júnior
+2025-02-12,18:00,C,1,Maximiliano Costa,João Rezende
+2025-02-12,19:00,B,4,Matheus Silva,Fernando Lino
+2025-02-12,19:00,C,4,Paulo Pedrosa,Wilson Lopes
+2025-02-13,19:30,B,2,Túlio Ourique,Lupesse Santana
+2025-02-14,19:00,C,4,Wilson Lopes,Bruno Casale
+2025-02-14,19:00,C,4,Júnior Neres,Paulo Pedrosa
+2025-02-14,20:00,B,4,Warwick Melo,Matheus Silva
+2025-02-14,20:00,C,1,João Rezende,Italo Araújo
+2025-02-14,21:00,C,1,Sandro Mesquita,Maximiliano Costa
+2025-02-15,08:00,C,2,Willian Ferreira,Denilson Montezani
+2025-02-15,08:00,C,3,Emivaldo Feitosa,Túlio Ourique
+2025-02-15,17:00,B,4,Warwick Melo,Sidney Santos
+2025-02-15,18:00,C,4,Aparecido Fernandes,Paulo Pedrosa
+2025-02-16,07:30,D,2,Rhuan Teixeira,Cássio Noronha
+2025-02-16,08:30,B,3,Vinicius Paiva,Danilo Alves
+2025-02-16,09:30,B,3,Luiz Júnior,Vinicius Paiva
+2025-02-16,10:00,D,1,Bruno Melo,Wilson Lopes
+2025-02-16,16:30,B,4,Matheus Silva,Sidney Santos
+2025-02-16,17:30,D,2,Yanna Sousa,Thiago Vaz
+2025-02-17,17:00,B,4,Fernando Lino,Sidney Santos
+2025-02-17,19:00,C,4,Aparecido Fernandes,Bruno Casale
+2025-02-17,20:00,C,2,Fernando Guedes,Denilson Montezani
+2025-02-19,19:00,B,3,Danilo Alves,José Junior
+2025-02-19,20:00,D,2,Thiago Vaz,Cássio Noronha
+2025-02-20,19:00,B,4,Joel Silva,Fernando Lino
+2025-02-21,18:00,B,2,Airton Barata,Augusto Espíndola
+2025-02-21,19:00,D,2,Rhuan Teixeira,Thiago Vaz
+2025-02-22,07:30,D,1,Gustavo Avila,Bruno Melo
+2025-02-22,16:00,D,2,Yanna Sousa,Rhuan Teixeira
+2025-02-22,17:00,B,2,Airton Barata,Túlio Ourique
+2025-02-22,19:00,C,4,Wilson Lopes,Aparecido Fernandes
+2025-02-23,08:00,C,4,Júnior Neres,Aparecido Fernandes
+2025-02-23,09:00,C,2,Denilson Montezani,Fagner Bantim
+2025-02-23,16:30,D,2,Cássio Noronha,Yanna Sousa
+2025-02-23,17:30,D,1,Gustavo Avila,Jalmir Fernandes
+2025-02-23,18:30,D,1,Wilson Lopes,Cleber Correia
+2025-02-24,19:00,B,4,Joel Silva,Warwick Melo
+2025-02-24,20:00,D,1,Cleber Correia,Jalmir Fernandes
+2025-02-26,19:00,B,4,Sidney Santos,Joel Silva
+2025-02-26,20:00,B,1,Walmir Júnior,Willian Ferreira
+2025-02-28,19:00,C,3,Túlio Ourique,Victtor Barbosa
+2025-02-28,20:00,B,2,Augusto Espíndola,Túlio Ourique
+2025-02-28,21:00,D,1,Wilson Lopes,Gustavo Avila
+2025-03-01,07:30,D,1,Bruno Melo,Jalmir Fernandes
+2025-03-01,17:30,D,1,Gustavo Avila,Cleber Correia
+2025-03-02,07:30,D,1,Cleber Correia,Bruno Melo
+2025-03-02,08:30,D,1,Jalmir Fernandes,Wilson Lopes
+2025-03-05,07:00,C,3,Mateus Moury,Emivaldo Feitosa
+2025-03-07,06:30,C,3,Túlio Ourique,Mateus Moury
+2025-03-07,18:00,B,1,Walmir Júnior,Carlos Costa
+2025-03-09,08:00,B,1,Carlos Costa,Walter Lucena
+2025-03-10,19:00,B,1,Willian Ferreira,Carlos Costa
+2025-03-10,19:00,C,2,Fagner Bantim,Willian Ferreira
+2025-03-12,19:00,C,3,Victtor Barbosa,Mateus Moury
