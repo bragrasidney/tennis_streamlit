@@ -319,7 +319,7 @@ with tab1:
         filter_by_class = st.checkbox("Filtrar por classe")
         selected_class = None
         if filter_by_class:
-            selected_class = st.selectbox("Selecione a classe", ["B", "C"])
+            selected_class = st.selectbox("Selecione a classe", ["B", "C", "D"])
 
         # Filtro por grupo (só aparece se uma classe for selecionada)
         filter_by_group = False
