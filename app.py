@@ -275,7 +275,7 @@ with tab1:
         with col2:
             game_time = st.time_input("Horário do Jogo", value=datetime.time(10, 0))  # Horário padrão: 10:00
         
-        class_type = st.selectbox("Classe", ["B", "C"])
+        class_type = st.selectbox("Classe", ["B", "C", "D"])
         group = st.selectbox("Grupo", [1, 2, 3, 4])
         player1 = st.selectbox("Jogador 1", options=jogadores)
         player2 = st.selectbox("Jogador 2", options=jogadores)
