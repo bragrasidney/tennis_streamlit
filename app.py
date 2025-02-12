@@ -458,7 +458,7 @@ with tab2:
 
     # Filtros para exibir estatísticas por grupo
     st.write("#### 🔍 Filtros para Estatísticas")
-    selected_class = st.selectbox("Selecione a classe", ["B", "C"])
+    selected_class = st.selectbox("Selecione a classe", ["B", "C", "D"])
     selected_group = st.selectbox("Selecione o grupo", [1, 2, 3, 4])
 
     # Calcula e exibe as estatísticas do grupo selecionado
